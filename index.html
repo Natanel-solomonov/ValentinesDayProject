@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine? 💕</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Screen 1: Initial Statement -->
+    <div id="screen1" class="screen active">
+        <div class="content">
+            <img src="Assets/Roses.png" alt="Roses" class="roses-image">
+            <h1 class="big-text">You said I had to ask you to be my valentine</h1>
+            <button class="continue-btn" onclick="goToScreen(2)">Continue</button>
+        </div>
+    </div>
+
+    <!-- Screen 2: Here Goes Nothing -->
+    <div id="screen2" class="screen">
+        <div class="content">
+            <h1 class="big-text">Ok... here goes nothing</h1>
+            <button class="continue-btn" onclick="goToScreen(3)">Continue</button>
+        </div>
+    </div>
+
+    <!-- Screen 3: Main Question -->
+    <div id="screen3" class="screen">
+        <div class="content">
+            <p id="warningText" class="warning-text"></p>
+            <h1 class="question-text">Rachel will you be my valentine?</h1>
+            <img src="Assets/ValentinesDayBear.png" alt="Valentine Bear" class="bear-image">
+            <div class="button-container">
+                <button class="yes-btn" onclick="acceptValentine()">Yes</button>
+                <button class="no-btn" id="noBtn" onmouseenter="moveNoButton()">No</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screen 4: Acceptance -->
+    <div id="screen4" class="screen">
+        <div class="content">
+            <h1 class="yay-text">YAYYY</h1>
+            <img src="Assets/Acceptance.png" alt="Acceptance" class="acceptance-image spinning">
+            <div class="firework" style="left: 10%; top: 15%"></div>
+            <div class="firework" style="right: 10%; top: 15%"></div>
+            <div class="firework" style="left: 15%; bottom: 15%"></div>
+            <div class="firework" style="right: 15%; bottom: 15%"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
